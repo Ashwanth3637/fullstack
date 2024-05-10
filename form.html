@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>form</title>
+    <style>
+button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+{
+background-image: url('image.jpg');
+background-repeat: no-repeat;
+}
+ 
+    </style>
+</head>
+<body style="background-color:orange;">
+<h1 style="background-color:DodgerBlue;">FORM REGISTERATION</h1>
+<form action="/action_page.php" autocomplete="on">
+<fieldset>
+<legend>FORM</legend>
+
+<label for="name" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);" >FIRST NAME:</label>
+<input type="text" name="name" id="name" placeholder="enter the first name"><br><br>
+<label for="lname" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">LAST NAME: </label>
+<input type="text" name="lname" id="lname" placeholder="enter the last name"><br><br>
+<label for="gen" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">Gender: </label><br>
+<input type ="radio" name="gen" ><label style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">MALE</label>
+<input type ="radio" name="gen"> <label style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">FEMALE</label><br><br>
+<label for="birthday" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);" >DATE OF BIRTH:</label>
+<input type="date" id="birthday" name="birthday"><br><br>
+<label for="Email" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">EMAIL</label>
+<input type="text" name="email" placeholder="enter your email"><br><br>
+<label for="MOBILE NUMBER"style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">MOBILE NUMBER</label>
+<input type='text' onkeyup='validate(this)' placeholder='Enter your mobile number'>
+    <p id='result'></p>
+    <script>
+      function validate(phoneNum) {
+        var phoneNumRegex = /^\+?([0-9]{3})\)?[ -]?([0-9]{3})[ -]?([0-9]{4})$/;
+        if(phoneNum.value.match(phoneNumRegex)) {
+        document.querySelector("#result").innerHTML="<span style='color:green;'>Valid</span>";
+        }  
+        else {  
+        document.querySelector("#result").innerHTML="<span style='color:red;'>Invalid</span>";
+        }
+      }
+function validate1(){
+      txt=document.querySelector("#mailInput").value;
+      if(emailValidation(txt)){
+        alert("Valid Email Address");
+      }else{
+        alert("Invalid Email Address");
+      }
+    }
+
+    function emailValidation(mailTxt){
+      var reg = /^([A-Za-z0-9._-])+\@([A-Za-z0-9._-])+\.([A-Za-z]{2,4})$/;
+      return reg.test(mailTxt);
+    }
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
+Password: <input type="password" value="FakePSW" id="myInput">
+<input type="checkbox" onclick="myFunction()">Show Password<br><br>
+<label for ="branch" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">BRANCH</label>
+<select id="branch" name="branch">
+<option value="cse" style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">CSE</option>
+<option value="IT" style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">IT</option>
+<option value="CSD" style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">CSD</option>
+<option value="EEE" style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">EEE</option>
+<option value="ECE" style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">ECE</option>
+<option value="AIDS" style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">AIDS</option></select><br><br>
+<label for="sk" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">AREA OF INTEREST</label><br>
+<input type="checkbox"> <label style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">CYBER SECURITY</label><br>
+<input type="checkbox"> <label style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">APP DEVELOPMENT</label><br>
+<input type="checkbox" > <label style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">GAME DEVELOPING</label><br>
+<input type="checkbox" > <label style="Gill Sans Extrabold,sans-serif ;color:rgb(25, 0, 255);">WEB DESIGNING</label><br><br>
+<label for="add" style="Gill Sans Extrabold,sans-serif ;color:rgb(255, 0, 255);">ADDRESS:</label><br>
+<br><br>
+<textarea rows="10" cols="30" placeholder="type your present address"></textarea><br><br>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+<h2>Animated Buttons - "Pressed Effect"</h2>
+
+<button class="button">SUBMIT</button><br><br>
+<input type="reset" value="Reset">
+<h1>My First JavaScript</h1>
+
+
+
+</fieldset>
+
+</form>
+</body>
+
+</html>
+
